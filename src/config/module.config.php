@@ -25,7 +25,6 @@ return array(
         'uploaderHoursBehind' => 0,
         'cachePath' => false,
         'symlinks' => array(),
-        'quiet' => true,
         'serveOptions' => array(
             'bubbleCssImports' => false,
             'maxAge' => 1800,

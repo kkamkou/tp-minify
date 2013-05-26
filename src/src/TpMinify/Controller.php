@@ -27,7 +27,13 @@ class Controller extends AbstractController
         $config = $this->getServiceLocator()->get('config');
         $config = $config[__NAMESPACE__];
 
+        // some important stuff
+        $config['quiet'] = true;
+
+        // the time correction
         Minify::$uploaderHoursBehind = $config['uploaderHoursBehind'];
+
+        // the cache engine
         Minify::setCache($config['cachePath'] ?: '', $config['cacheFileLocking']);
 
         // check for URI versioning
