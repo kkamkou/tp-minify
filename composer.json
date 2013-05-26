@@ -1,0 +1,30 @@
+{
+    "name": "kkamkou/TpMinify",
+    "description": "This module uses the Steve (mrclay) Clay's Minify library for styles and scripts obfuscation",
+    "type": "library",
+    "keywords": [
+        "zf2",
+        "minify",
+        "obfuscation",
+        "asset"
+    ],
+    "homepage": "http://github.com/kkamkou/TpMinify",
+    "authors": [
+        {
+            "name": "Kanstantsin Kamkou",
+            "email": "kkamkou@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "zendframework/zendframework": ">=2.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "TpMinify": "src/"
+        },
+        "classmap": [
+            "./"
+        ]
+    }
+}
