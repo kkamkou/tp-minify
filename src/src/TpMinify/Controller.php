@@ -1,4 +1,13 @@
 <?php
+/**
+ * TpMinify - third-party module for the Zend Framework 2
+ *
+ * @category Module
+ * @package  TpMinify
+ * @author   Kanstantsin A Kamkou (2ka.by)
+ * @license  http://opensource.org/licenses/bsd-license.php  New BSD License
+ * @link     http://github.com/kkamkou/TpMinify/
+ */
 
 namespace TpMinify;
 
@@ -13,8 +22,8 @@ use Minify;
 /**
  * Class Controller
  *
- * @see AbstractController
- * @package TpMinify
+ * @see DispatchableInterface
+ * @see ServiceLocatorAwareInterface
  */
 class Controller implements DispatchableInterface, ServiceLocatorAwareInterface
 {
