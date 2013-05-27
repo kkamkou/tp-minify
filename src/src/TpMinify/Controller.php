@@ -54,11 +54,11 @@ class Controller implements DispatchableInterface, ServiceLocatorAwareInterface
     public function dispatch(RequestInterface $request, ResponseInterface $response = null)
     {
         // the config hash
-        $config = $this->getServiceLocator()->get('config');
+        $config = $this->getServiceLocator()->get('Config');
         $config = $config[__NAMESPACE__];
 
         // some important stuff
-        $config['quiet'] = true;
+        $config['serveOptions']['quiet'] = true;
 
         // the time correction
         Minify::$uploaderHoursBehind = $config['uploaderHoursBehind'];
@@ -66,13 +66,19 @@ class Controller implements DispatchableInterface, ServiceLocatorAwareInterface
         // the cache engine
         Minify::setCache($config['cachePath'] ?: '', $config['cacheFileLocking']);
 
+        // doc root corrections
+        if ($config['documentRoot']) {
+            $_SERVER['DOCUMENT_ROOT'] = $config['documentRoot'];
+            Minify::$isDocRootSet = true;
+        }
+
         // check for URI versioning
         if (preg_match('~&\d~', $request->getUriString())) {
             $config['serveOptions']['maxAge'] = 31536000;
         }
 
         // minify result as array of information
-        $result = Minify::serve('MinApp', $config);
+        $result = Minify::serve('MinApp', $config['serveOptions']);
 
         // some corrections
         if (isset($result['headers']['_responseCode'])) {

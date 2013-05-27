@@ -19,6 +19,7 @@ return array(
         'invokables' => array('TpMinifyProxy' => 'TpMinify\Controller')
     ),
     'TpMinify' => array(
+        'documentRoot' => false,
         'errorLogger' => false,
         'allowDebugFlag' => false,
         'cacheFileLocking' => true,
