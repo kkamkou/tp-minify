@@ -32,6 +32,18 @@ $this->headLink()->prependStylesheet($this->basePath('/min?g=css'))
 $this->headLink()->prependStylesheet($this->basePath('/min?f=example.css'))
 ```
 
+### Problems
+If you got something like this:
+
+```
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Installation request for kkamkou/tp-minify dev-master -> satisfiable by kkamkou/tp-minify[dev-master].
+    - kkamkou/tp-minify dev-master requires mrclay/minify dev-master -> no matching package found.
+```
+Just add the ```"mrclay/minify": "dev-master"``` to the ```composer.json``` of your project. [Check this issue](https://github.com/mrclay/minify/issues/56).
+
 ## Options
 [Source code with the description of variables](https://code.google.com/p/minify/source/browse/min/config.php).
 For example:
