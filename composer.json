@@ -22,9 +22,6 @@
     "autoload": {
         "psr-0": {
             "TpMinify": "src/"
-        },
-        "classmap": [
-            "./"
-        ]
+        }
     }
 }
