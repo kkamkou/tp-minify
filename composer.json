@@ -4,7 +4,6 @@
     "type": "library",
     "homepage": "http://github.com/kkamkou/tp-minify",
     "license": "BSD-2-Clause",
-    "minimum-stability": "dev",
     "keywords": [
         "zf2",
         "minify",
