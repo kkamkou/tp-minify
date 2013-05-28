@@ -33,6 +33,16 @@ $this->headLink()->prependStylesheet($this->basePath('/min?f=example.css'))
 ```
 
 ## Options
+[Source code with the description of variables](https://code.google.com/p/minify/source/browse/min/config.php).
+For example:
+```php
+// $min_cacheFileLocking
+'TpMinify' => array('cacheFileLocking' => ...);
+// $min_serveOptions['bubbleCssImports']
+'TpMinify' => array('serveOptions' => array('bubbleCssImports' => ...));
+// etc.
+```
+
 
 ## New BSD License
 Copyright (c) 2013, Kanstantsin Kamkou
