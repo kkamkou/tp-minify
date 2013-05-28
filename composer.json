@@ -1,8 +1,8 @@
 {
-    "name": "kkamkou/TpMinify",
+    "name": "kkamkou/tp-minify",
     "description": "This module uses the Steve (mrclay) Clay's Minify library for styles and scripts obfuscation",
     "type": "library",
-    "homepage": "http://github.com/kkamkou/TpMinify",
+    "homepage": "http://github.com/kkamkou/tp-minify",
     "minimum-stability": "dev",
     "keywords": [
         "zf2",
