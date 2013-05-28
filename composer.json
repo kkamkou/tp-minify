@@ -22,7 +22,7 @@
         "mrclay/minify": "dev-master"
     },
     "autoload": {
-        "psr-0": {"TpMinify": "src/"},
+        "psr-0": {"TpMinify": "src/src/"},
         "classmap": ["src/Module.php"]
     }
 }
