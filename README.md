@@ -3,6 +3,34 @@ This module uses the [Steve (mrclay) Clay's Minify](http://github.com/mrclay/min
 
 ## Installation
 ### Composer
+ * Install the [Composer](http://getcomposer.org/doc/00-intro.md)
+ * Add string to the ```composer.json``` file, to the ```require``` section: ```"kkamkou/tp-minify": "dev-master"```
+ * Execute ```composer update```
+ * Open (just an example) the ```Frontend/config/module.config.php``` and add this config stub:
+
+```php
+
+'TpMinify' => array(
+    'serveOptions' => array(
+        'minApp' => array(
+            'groups' => array(
+                'css' => array(
+                    '//../module/Frontend/public/css/buttons.css',
+                    '//../module/Frontend/public/css/forms.css'
+                )
+            )
+        )
+    )
+)
+```
+ * Put styles into the Head section:
+
+```php
+
+$this->headLink()->prependStylesheet($this->basePath('/min?g=css'))
+// or
+$this->headLink()->prependStylesheet($this->basePath('/min?f=example.css'))
+```
 
 ## Options
 
