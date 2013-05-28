@@ -3,7 +3,6 @@
     "description": "This module uses the Steve (mrclay) Clay's Minify library for styles and scripts obfuscation",
     "type": "library",
     "homepage": "http://github.com/kkamkou/tp-minify",
-    "minimum-stability": "dev",
     "license": "BSD-2-Clause",
     "keywords": [
         "zf2",
