@@ -17,6 +17,9 @@ This module uses the [Steve (mrclay) Clay's Minify](http://github.com/mrclay/min
                 'css' => array(
                     '//../module/Frontend/public/css/buttons.css',
                     '//../module/Frontend/public/css/forms.css'
+                ),
+                'js' => array(
+                    '//js/common.js'
                 )
             )
         )
@@ -28,6 +31,7 @@ This module uses the [Steve (mrclay) Clay's Minify](http://github.com/mrclay/min
 ```php
 
 $this->headLink()->prependStylesheet($this->basePath('/min?g=css'))
+$this->headScript()->prependFile($this->basePath('/min?g=js'))
 // or
 $this->headLink()->prependStylesheet($this->basePath('/min?f=example.css'))
 ```
