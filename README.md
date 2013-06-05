@@ -4,8 +4,9 @@ This module uses the [Steve (mrclay) Clay's Minify](http://github.com/mrclay/min
 ## Installation
 ### Composer
  * Install the [Composer](http://getcomposer.org/doc/00-intro.md)
- * Add string to the ```composer.json``` file, to the ```require``` section: ```"kkamkou/tp-minify": "dev-master"```
- * Execute ```composer update```
+ * Add ```"kkamkou/tp-minify": "dev-master"``` to a ```composer.json``` file, to the ```require``` section 
+ * Execute ```composer update``` (see: Problems)
+ * Add ```'modules' => array(..., 'TpMinify')``` to the ```application.config.php``` file of your project
  * Open (just an example) the ```Frontend/config/module.config.php``` and add this config stub:
 
 ```php
