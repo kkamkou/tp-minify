@@ -60,6 +60,20 @@ For example:
 // etc.
 ```
 
+### How-To
+###### What to do with the ```/module/YourModule/public/images/``` folder?
+Just create a symlink to this module (```/public/images/modules/YourModule```) and enable the [Manual Rewriting](http://code.google.com/p/minify/wiki/UriRewriting).
+```php
+'TpMinify' => array(
+    'serveOptions' => array(
+        'rewriteCssUris' => false,
+        'minifierOptions' => array(
+            'text/css' => array('prependRelativePath' => '/images/modules/YourModule/')
+        )
+    )
+)
+```
+
 
 ## New BSD License
 Copyright (c) 2013, Kanstantsin Kamkou
