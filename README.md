@@ -6,7 +6,7 @@ This module uses the [Steve (mrclay) Clay's Minify](http://github.com/mrclay/min
  * Install the [Composer](http://getcomposer.org/doc/00-intro.md)
  * Add ```"kkamkou/tp-minify": "dev-master"``` to a ```composer.json``` file, to the ```require``` section 
  * Execute ```composer update``` (see: Problems)
- * Add ```'modules' => array(..., 'TpMinify')``` to the ```application.config.php``` file of your project
+ * Add ```'modules' => array('TpMinify', ...)``` to the ```application.config.php``` file of your project. *Important thing is to place the "TpMinify" before any other modules.*
  * Open (just an example) the ```Frontend/config/module.config.php``` and add this config stub:
 
 ```php
@@ -62,7 +62,7 @@ For example:
 
 ### How-To
 ###### What to do with the ```/module/YourModule/public/images/``` folder?
-Just create a symlink to this module (```/public/images/modules/YourModule```) and enable the [Manual Rewriting](http://code.google.com/p/minify/wiki/UriRewriting).
+Create a symlink to this module (```/public/images/modules/YourModule```) and enable the [Manual Rewriting](http://code.google.com/p/minify/wiki/UriRewriting).
 ```php
 'TpMinify' => array(
     'serveOptions' => array(
@@ -73,7 +73,24 @@ Just create a symlink to this module (```/public/images/modules/YourModule```) a
     )
 )
 ```
-
+###### Is it possible to minify inline scripts?
+Enable the HeadScript view helper:
+```php
+'TpMinify' => array(
+    'helpers' => array(
+        'headScript' => array(
+            'enabled' => true,
+            'options' => array(// serveOptions here if needed)
+        )
+    )
+)
+// and use it in your templates
+<?$this->headScript()->captureStart()?>
+$(function() {
+    console.log('hello');
+});
+<?$this->headScript()->captureEnd()?>
+```
 
 ## New BSD License
 Copyright (c) 2013, Kanstantsin Kamkou
