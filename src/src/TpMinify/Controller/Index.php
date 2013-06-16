@@ -6,10 +6,10 @@
  * @package  TpMinify
  * @author   Kanstantsin A Kamkou (2ka.by)
  * @license  http://opensource.org/licenses/bsd-license.php  New BSD License
- * @link     http://github.com/kkamkou/TpMinify/
+ * @link     http://github.com/kkamkou/tp-minify/
  */
 
-namespace TpMinify;
+namespace TpMinify\Controller;
 
 use Zend\ServiceManager\ServiceLocatorAwareInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
@@ -20,12 +20,12 @@ use Zend\Http\Headers;
 use Minify;
 
 /**
- * Class Controller
- *
+ * Class Index
+ * @package TpMinify\Controller
  * @see DispatchableInterface
  * @see ServiceLocatorAwareInterface
  */
-class Controller implements DispatchableInterface, ServiceLocatorAwareInterface
+class Index implements DispatchableInterface, ServiceLocatorAwareInterface
 {
     /**
      * @var ServiceLocatorInterface
@@ -64,7 +64,7 @@ class Controller implements DispatchableInterface, ServiceLocatorAwareInterface
     {
         // the config hash
         $config = $this->getServiceLocator()->get('Config');
-        $config = $config[__NAMESPACE__];
+        $config = $config['TpMinify'];
 
         // some important stuff
         $config['serveOptions']['quiet'] = true;

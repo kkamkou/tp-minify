@@ -6,20 +6,38 @@
  * @package  TpMinify
  * @author   Kanstantsin A Kamkou (2ka.by)
  * @license  http://opensource.org/licenses/bsd-license.php  New BSD License
- * @link     http://github.com/kkamkou/TpMinify/
+ * @link     http://github.com/kkamkou/tp-minify/
  */
 
 namespace TpMinify;
 
-class Module
+use Zend\ModuleManager\Feature\ConfigProviderInterface;
+use Zend\ModuleManager\Feature\ViewHelperProviderInterface;
+use Zend\View\Helper\Service;
+
+/**
+ * Class Module
+ * @package TpMinify
+ * @see ConfigProviderInterface
+ * @see ViewHelperProviderInterface
+ */
+class Module implements ConfigProviderInterface, ViewHelperProviderInterface
 {
-    /**
-     * Returns set of options as array
-     *
-     * @return array
-     */
+    /** @return array */
     public function getConfig()
     {
         return require __DIR__ . '/config/module.config.php';
+    }
+
+    /** @return array */
+    public function getViewHelperConfig()
+    {
+        return array(
+            'invokables' => array(
+                'headscript' => 'TpMinify\View\Helper\HeadScript'
+                // try to avoid this idea in your project
+                // 'headstyle' => 'TpMinify\View\Helper\HeadStyle'
+            )
+        );
     }
 }

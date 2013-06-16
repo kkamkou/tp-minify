@@ -26,7 +26,7 @@ return array(
         )
     ),
     'controllers' => array(
-        'invokables' => array('TpMinifyProxy' => 'TpMinify\Controller')
+        'invokables' => array('TpMinifyProxy' => 'TpMinify\Controller\Index')
     ),
     'TpMinify' => array(
         'documentRoot' => false,
@@ -43,6 +43,14 @@ return array(
                 'groupsOnly' => false,
                 'groups' => array(
                     // your groups list
+                )
+            )
+        ),
+        'helpers' => array( // $this->headScript()->CaptureStart/CaptureEnd()
+            'headScript' => array(
+                'enabled' => false,
+                'options' => array(
+                    'maxAge' => 86400 // and other serveOptions options
                 )
             )
         )
