@@ -6,7 +6,7 @@
  * @package  TpMinify
  * @author   Kanstantsin A Kamkou (2ka.by)
  * @license  http://opensource.org/licenses/bsd-license.php  New BSD License
- * @link     http://github.com/kkamkou/TpMinify/
+ * @link     http://github.com/kkamkou/tp-minify/
  */
 
 return array(
