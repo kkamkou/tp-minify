@@ -92,6 +92,11 @@ $(function() {
 <?$this->headScript()->captureEnd()?>
 ```
 
+###### I have two or more modules, how to deal with that?
+1. Put a common stuff into the ```global.php```
+2. And put a module-dependent stuff into the ```module.config.php``` of each module
+3. Use prefixes for groups: ```backend-css``` and ```frontend-css``` etc.
+
 ## New BSD License
 Copyright (c) 2013, Kanstantsin Kamkou
 All rights reserved.
