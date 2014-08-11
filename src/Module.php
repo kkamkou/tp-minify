@@ -5,7 +5,7 @@
  * @category Module
  * @package  TpMinify
  * @author   Kanstantsin A Kamkou (2ka.by)
- * @license  http://opensource.org/licenses/bsd-license.php  New BSD License
+ * @license  http://opensource.org/licenses/MIT The MIT License (MIT)
  * @link     http://github.com/kkamkou/tp-minify/
  */
 
