@@ -3,7 +3,7 @@
     "description": "Zend Framework 2 module which uses the Steve (mrclay) Clay's Minify library for styles and scripts obfuscation",
     "type": "library",
     "homepage": "http://github.com/kkamkou/tp-minify",
-    "license": "BSD-2-Clause",
+    "license": "MIT",
     "keywords": [
         "zf2",
         "minify",
