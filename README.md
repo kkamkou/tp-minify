@@ -84,4 +84,4 @@ $(function() {
 2. And put a module-dependent stuff into the ```module.config.php``` of each module
 3. Use prefixes for groups: ```backend-css``` and ```frontend-css``` etc.
 
-* MIT License
+## MIT License
