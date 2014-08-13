@@ -67,7 +67,7 @@ Enable the HeadScript view helper:
     'helpers' => array(
         'headScript' => array(
             'enabled' => true,
-            'options' => array(// serveOptions here if needed)
+            'options' => array() // serveOptions here if needed
         )
     )
 )
