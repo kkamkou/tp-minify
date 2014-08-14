@@ -13,13 +13,13 @@ namespace TpMinify;
 
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\ModuleManager\Feature\ViewHelperProviderInterface;
-use Zend\View\Helper\Service;
 
 /**
  * Class Module
- * @package TpMinify
+ *
  * @see ConfigProviderInterface
  * @see ViewHelperProviderInterface
+ * @package TpMinify
  */
 class Module implements ConfigProviderInterface, ViewHelperProviderInterface
 {

@@ -17,6 +17,7 @@ use Zend\Stdlib\DispatchableInterface;
 use Zend\Stdlib\ResponseInterface;
 use Zend\Stdlib\RequestInterface;
 use Zend\Http\Headers;
+
 use Minify;
 
 /**

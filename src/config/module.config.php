@@ -13,7 +13,7 @@ return array(
     'router' => array(
         'routes' => array(
             'TpMinify' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => 'Literal',
                 'may_terminate' => true,
                 'options' => array(
                     'route'    => '/min',
