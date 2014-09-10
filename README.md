@@ -49,7 +49,7 @@ For example:
 
 ### How-To
 ###### What to do with the ```/module/YourModule/public/images/``` folder?
-Create a symlink to this module (```/public/images/modules/YourModule```) and enable the [Manual Rewriting](http://code.google.com/p/minify/wiki/UriRewriting).
+a. Create a symlink to this module (```/public/images/modules/YourModule```) and enable the [Manual Rewriting](http://code.google.com/p/minify/wiki/UriRewriting).
 ```php
 'TpMinify' => array(
     'serveOptions' => array(
@@ -60,6 +60,7 @@ Create a symlink to this module (```/public/images/modules/YourModule```) and en
     )
 )
 ```
+b. Use the ```symlink``` option, which is described in the [configuration file](https://code.google.com/p/minify/source/browse/min/config.php).
 ###### Is it possible to minify inline scripts?
 Enable the HeadScript view helper:
 ```php
