@@ -60,7 +60,16 @@ a. Create a symlink to this module (```/public/images/modules/YourModule```) and
     )
 )
 ```
-b. Use the ```symlinks``` option, which is described in the [configuration file](https://code.google.com/p/minify/source/browse/min/config.php).
+b. Add the ```symlinks``` option if needed, which is described in the [configuration file](https://code.google.com/p/minify/source/browse/min/config.php).
+```
+'minifierOptions' => array(
+    'text/css' => array(
+        'symlinks' => array(
+            '//fonts' => Module::DIR . '/public/fonts'
+        )
+    )
+)
+```
 ###### Is it possible to minify inline scripts?
 Enable the HeadScript view helper:
 ```php
