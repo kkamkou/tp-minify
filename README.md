@@ -60,7 +60,7 @@ a. Create a symlink to this module (```/public/images/modules/YourModule```) and
     )
 )
 ```
-b. Add the ```symlinks``` option if needed, which is described in the [configuration file](https://code.google.com/p/minify/source/browse/min/config.php).
+b. Add the ```symlinks``` option if needed, which is described in the [configuration file](https://code.google.com/p/minify/source/browse/min/config.php) and [here](https://code.google.com/p/minify/wiki/AlternateFileLayouts).
 ```php
 'minifierOptions' => array(
     'text/css' => array(
